@@ -49,6 +49,4 @@ stages:
         projectName: 'bookstoreapi'
         action: 'Run a Docker Compose command'
         dockerComposeCommand: 'up'
-    
-    # - script: docker images
-    #   displayName: 'docker images'
+        arguments: '-d'

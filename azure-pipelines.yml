@@ -58,6 +58,6 @@ stages:
         projectName: $(Build.Repository.Name)
         qualifyImageNames: true
         outputDockerComposeFile: $(Build.StagingDirectory)/docker-compose.yml
-      - script: cat $(Build.StagingDirectory)/docker-compose.yml
-      displayName: 'compose config'
+        - script: cat $(Build.StagingDirectory)/docker-compose.yml
+        displayName: 'compose config'
 

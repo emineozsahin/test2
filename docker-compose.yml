@@ -13,7 +13,7 @@ services:
       - alinet
 
   myapp:
-    image: 620bef75a214/bookstoreapi:latest
+    image: bookstoreapi:latest
     container_name: myapp
     restart: always
     depends_on:

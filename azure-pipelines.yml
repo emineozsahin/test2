@@ -39,8 +39,6 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    # - script: docker-compose up -d
-    #   displayName: 'docker compose'
     
     - task: DockerCompose@0
       inputs:

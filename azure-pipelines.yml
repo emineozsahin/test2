@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'dd61c559-7dda-4793-b06c-ce3ff8154a21'
-  imageRepository: 'bookstoreapi'
+  imageRepository: '620bef75a214/bookstoreapi'
   containerRegistry: 'emineacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: 'latest'

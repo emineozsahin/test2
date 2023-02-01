@@ -39,5 +39,16 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    - script: docker images
-      displayName: 'docker images'
+    
+    - task: DockerCompose@0
+      inputs:
+        containerregistrytype: 'Azure Container Registry'
+        azureSubscription: 'bookstore'
+        azureContainerRegistry: '{"loginServer":"emineacr.azurecr.io", "id" : "/subscriptions/4182b63f-bfaa-4c6b-a529-155e10b3a804/resourceGroups/learning/providers/Microsoft.ContainerRegistry/registries/emineacr"}'
+        dockerComposeFile: '**/docker-compose.yml'
+        projectName: 'bookstoreapi'
+        action: 'Run a Docker Compose command'
+        dockerComposeCommand: 'up'
+    
+    # - script: docker images
+    #   displayName: 'docker images'
